@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ About }}{% endblock %}
+
+{% block content %}
+
+    <div class="history">
+        <div class="history-holder">
+            <div class="history-info">
+                <div class="container">
+                    <div class="history-title">
+                        Наша&nbsp<span>История</span>
+                    </div>
+                    <div class="history-desc">
+                        {{ history_text }}
+                    </div>
+
+                    <div class="history-number">
+                        <div class="number-item">
+                            xxx <span>Напитки</span>
+                        </div>
+                        <div class="number-item">
+                            xxx <span>Еда</span>
+                        </div>
+                        <div class="number-item">
+                            xxx <span>Закуски</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="history-images">
+                <img class="images-1" src="../../static/media/1.png" alt="">
+                <img class="images-2" src="../../static/media/2.png" alt="">
+                <img class="images-3" src="../../static/media/3.png" alt="">
+                <img class="images-4" src="../../static/media/4.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    
+{% endblock %}
