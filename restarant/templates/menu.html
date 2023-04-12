@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Menu page{% endblock %}
+
+{% block content %}
+    
+<div class="header-down-menu">
+    <div class='text-header'>
+        Наше меню
+    </div>
+
+    <div class="container-menu">
+
+        
+        <div class="card-container">
+
+
+            {% for el in fast_food %}
+
+                <div class="card">
+
+                    <div class="img-and-price">
+                        <img class="card-img-menu" src="{% static el.path_to_img %}" alt="1">
+                        <div class="price">{{ el.price }}</div>
+                    </div>
+                    <div class="header-card-menu">
+                        {{ el.title }}
+                    </div>
+                    <div class="desc-card-menu">
+                        {{ el.anons }}
+                    </div>
+                    <a class="button-card-menu" href="@">В КОРЗИНУ</a>
+                </div>
+
+            {% endfor %}
+
+            
+        </div>
+
+        <div class="card-container">
+
+
+            {% for el in pizzas %}
+
+                <div class="card">
+
+                    <div class="img-and-price">
+                        <img class="card-img-menu" src="{% static el.path_to_img %}" alt="1">
+                        <div class="price">{{ el.price }}</div>
+                    </div>
+                    <div class="header-card-menu">
+                        {{ el.title }}
+                    </div>
+                    <div class="desc-card-menu">
+                        {{ el.anons }}
+                    </div>
+                    <a class="button-card-menu" href="@">В КОРЗИНУ</a>
+                </div>
+
+            {% endfor %}
+
+            
+        </div>
+
+        
+
+
+
+    </div>
+
+    
+</div>
+    
+{% endblock %}

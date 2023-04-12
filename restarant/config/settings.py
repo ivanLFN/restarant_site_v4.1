@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
     'users',
     'widget_tweaks',
+    'menu',
 ]
 
 MIDDLEWARE = [
