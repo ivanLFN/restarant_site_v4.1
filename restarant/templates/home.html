@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{% block title %}Home page{% endblock %}
+
+{% block content %}
+    <div class="header-down">
+        <div class="container">
+            <div class="header-title">
+                Добро пожаловать в
+                <div class="header-subtitle">
+                    Наш ресторан
+                </div>
+
+                <div class="header-subtitle_two">
+                    ДОМ ЛУЧШЕЙ ЕДЫ
+                </div>
+                <div class="header-btn">
+                    <a href="@" class="header-button">VIEW MENU</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div class="container">
+            <div class="card-holder">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="../../static/media/card.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        Магическая&nbsp<span>Атмосфера</span>
+                    </div>
+                    <div class="card-desc">
+                        В нашем заведении царит магическая атмосфера
+                        наполненная вкусными ароматами
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="../../static/media/card.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        Лучшее качество&nbsp<span>Еды</span>
+                    </div>
+                    <div class="card-desc">
+                        Качество нашей
+                        Еды - отменное!
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="../../static/media/card.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        Недорогая&nbsp<span>Еда</span>
+                    </div>
+                    <div class="card-desc">
+                        Стоимость нашей Еды зависит только от ее
+                        количества. Качество всегда на высоте!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="history">
+        <div class="history-holder">
+            <div class="history-info">
+                <div class="container">
+                    <div class="history-title">
+                        Наша&nbsp<span>История</span>
+                    </div>
+                    <div class="history-desc">
+                        {{ history_text }}
+                    </div>
+
+                    <div class="history-number">
+                        <div class="number-item">
+                            xxx <span>Напитки</span>
+                        </div>
+                        <div class="number-item">
+                            xxx <span>Еда</span>
+                        </div>
+                        <div class="number-item">
+                            xxx <span>Закуски</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="history-images">
+                <img class="images-1" src="../../static/media/1.png" alt="">
+                <img class="images-2" src="../../static/media/2.png" alt="">
+                <img class="images-3" src="../../static/media/3.png" alt="">
+                <img class="images-4" src="../../static/media/4.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="black-block">
+        <div class="container_black">
+            <div class="block-holder">
+                <div class="Left">
+                    <div class="Left-title">
+                        Отпразднуйте в одном из <br> самых лучших ресторанов.
+                    </div>
+
+                    <div class="Left-text">
+                        Только в этом месяце бизнес-ланч от 250 ₽
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="right-button">
+                        <a href="#" class="right-btn">
+                            ЗАКАЗ СТОЛИКА
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+{% endblock %}

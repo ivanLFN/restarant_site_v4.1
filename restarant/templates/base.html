@@ -1,0 +1,80 @@
+<!-- 
+<ul>
+    <li>
+        User {{ user }}
+    </li>
+
+    <li>
+        <a href="{% url 'home' %}">Home</a>
+    </li>
+</ul> -->
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Base page{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="container_head">
+            <div class="header-line">
+                <div class="header-logo">
+                    <img src="{% static 'media/logo.png' %}" alt="">
+                </div>
+
+                <div class="nav">
+                    <a class="nav-item" href="{% url 'home' %}">ГЛАВНАЯ</a>
+                    <a class="nav-item" href="@">МЕНЮ</a>
+                    <a class="nav-item" href="@">О НАС</a>
+                    <a class="nav-item" href="@">БРОНЬ</a>
+                </div>
+
+                <div class="cart">
+                    <a href="#">
+                        <img class="cart-img" src="{% static 'media/cart.png' %}" alt="">
+                    </a>
+                </div>
+
+                <div class="phone">
+                    <div class="phone-holder">
+                        <div class="phone-image">
+                            <img src="{% static 'media/phone.png' %}">
+                        </div>
+                        <div class="number"><a class="num" href="#">+999-888-76-54</a></div>
+                    </div>
+                    <div class="phone-text">
+                        Свяжитесь с нами для </br> бронирования
+                    </div>
+                </div>
+                <div class="btn">
+                        <a class="button" href="#">ЗАКАЗ СТОЛИКА</a>
+                </div>
+
+                <div class="vertical-line"></div> 
+
+                <div class="nav">
+                    
+
+                    {% if user.is_authenticated %}
+                        <a class="nav-item" href="{% url 'logout' %}">LOGOUT</a>
+                        <div class='nav-item'> User: {{ user }}</div>
+                    {% else %}
+                        <a class="nav-item" href="{% url 'login' %}">LOG IN</a>
+                    {% endif %}
+                    
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+
+</body>
+</html>

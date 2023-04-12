@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+
+    {% if form.errors %}
+        <p>{{ form.errors.error }}</p>
+    {% endif %}
+
+    <div class="login-form-styles">
+        <form class="login-form" action="{% url 'login' %}" method="post">
+            <div class="header-login">Вход</div>
+            {% for field in form %}
+                <div class="form-group">
+                    <label for="{{ field.auto_id }}">{{ field.label }}</label>
+                    {{ field|add_class:'input-field' }}
+                </div>
+            {% endfor %}
+            {% csrf_token %}
+            <div class="options-login">
+                <a class="forgot-password-link" href="{% url 'password_reset' %}">Forgot password?</a> |
+                <a class="register-link" href="{% url 'register' %}">Register</a>
+            </div>
+            <button class="submit-button" type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}

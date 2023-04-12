@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+
+    <!-- <form action="{% url 'register' %}" method="post">
+        {{ form }}
+        {% csrf_token %}
+        <button type="submit">Submit</button>
+    </form> -->
+    <div class="register-form-styles">
+            <form class="regiser-form" action="{% url 'register' %}" method="post">
+                <div class="header-regiser">Регистрация</div>
+                {% for field in form %}
+                <div class="form-group">
+                    <label for="{{ field.auto_id }}">{{ field.label }}</label>
+                    {{ field|add_class:'input-field' }}
+                </div>
+                {% endfor %}
+                {% csrf_token %}
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+    </div>
+{% endblock %}
