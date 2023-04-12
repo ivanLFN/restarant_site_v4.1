@@ -10,4 +10,6 @@ urlpatterns = [
 
     path('menu/', include('menu.urls')),
 
+    path('blog/', include('blog.urls')),
+
 ]
