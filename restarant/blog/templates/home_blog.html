@@ -15,6 +15,10 @@
             
             <div class="active-post">
                 {% block active %}
+                    <div class="empty-post-active">
+                        <div class="none-active-post">Используйте один из постов справа</div>
+                        <img class="img-none-active-post" src="{% static 'media/arrow-blog.png' %}" alt="1">
+                    </div>
                 {% endblock %}
             </div>
             

@@ -545,7 +545,7 @@ card-menu,
 
 .register-form-styles{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-image: url("../media/login_register_bg.jpg");
+    background-image: url("../media/bg_menu.jpg");
     background-size: cover;
     height: 88vh;
 
@@ -606,7 +606,7 @@ card-menu,
 
 .login-form-styles{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-image: url("../media/login_register_bg.jpg");
+    background-image: url("../media/bg_menu.jpg");
     background-size: cover;
     height: 88vh;
 
@@ -636,7 +636,7 @@ card-menu,
 
 .reset-passowrd-form-styles{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-image: url("../media/login_register_bg.jpg");
+    background-image: url("../media/bg_menu.jpg");
     background-size: cover;
     height: 88vh;
 
@@ -875,4 +875,17 @@ card-menu,
     margin-bottom: 30px;
     border: 1px solid #53138c;
     padding: 20px 20px;
+}
+
+.none-active-post{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    color: #4e4e4e;
+}
+
+.empty-post-active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
