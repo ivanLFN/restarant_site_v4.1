@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+    <div class="blog">
+
+        <!-- <div class="blog-header">BLOG</div> -->
+        
+        <div class="blog-content">
+            
+            
+            <div class="active-post">
+                {% block active %}
+                {% endblock %}
+            </div>
+            
+            
+            <div class="posts-list">
+                <div class="header-post-list">
+                    <hr class="custom-hr">
+                    ALL POSTS
+                    <hr class="custom-hr">
+                </div>
+
+                <!-- <a href="@" class="card-blog">
+                    <img class="card-img-blog-list" src="{% static 'media/blog/macaroni_cheese.jpg' %}" alt="1">
+                    <div class="card-header-blog-list">NEW DISH: Macaroni and Cheese</div>
+                </a> -->
+
+
+                {% for post in posts %}
+                    <a href="{% url 'post_detail' post.id %}" class="card-blog">
+                        <img class="card-img-blog-list" src="{% static post.path_to_img %}" alt="1">
+                        <div class="card-header-blog-list">{{post.category}}:{{ post.title }}</div>
+                    </a>
+
+                    {% empty %} 
+                    <div class="empty-post">Постов нет</div>
+                {% endfor %}
+                
+
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

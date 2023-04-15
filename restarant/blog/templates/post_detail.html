@@ -1,0 +1,30 @@
+{% extends 'home_blog.html' %}
+
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block active %}
+
+    <img class="img-blog-active" src="{% static post.path_to_img %}" alt="1">
+    <div class="header-blog-active">{{ post.category }}: {{ post.title }}</div>
+
+    <div class="meta-data-blog-active">
+        <div class="user-blog-active">
+            <img class="img-user-blog-active" src="{% static 'media/user_blog.png' %}" alt="1">
+            <div class="user-name-blog-active">{{ post.author}}</div>
+        </div>
+
+        <div class="date-blog-active">
+            <img class="img-date-blog-active" src="{% static 'media/calendar_blog.png' %}" alt="1">
+            <div class="user-name-blog-active">{{ post.pub_date }}</div>
+        </div>
+    </div>
+
+    <div class="text-blog-active">
+
+        {{ html_content | safe }}
+
+    </div>
+
+{% endblock %}

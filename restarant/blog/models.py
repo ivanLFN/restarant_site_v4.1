@@ -13,6 +13,17 @@ class Post(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    path_to_img = models.CharField(max_length=100, default='none')
 
     def __str__(self):
         return self.title
+    
+
+# class Comment(models.Model):
+#     post = models.ForeignKey(Post, on_delete=models.CASCADE)
+#     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+#     content = models.TextField()
+#     pub_date = models.DateTimeField(auto_now_add=True)
+
+#     def __str__(self):
+#         return self.content

@@ -214,7 +214,7 @@ body {
 }
 
 .history {
-    margin-top: 80px;
+    margin-top: 120px;
     margin-left: 190px;
     margin-bottom: 180px;
 }
@@ -647,6 +647,145 @@ card-menu,
     flex-direction: column;
     align-items: center;
 }
+
+.blog{
+    background-image: url("../media/bg_menu.jpg");
+    background-size: cover;
+    padding: 20px 100px;
+}
+
+.blog-header{
+    font-size: 35px;
+    font-weight: 800;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.blog-content{
+    display: flex;
+}
+
+.active-post{
+    background-color: #ffffff;
+    width: 100%;
+    padding: 20px 20px;
+}
+
+.posts-list{
+    font-size: 22px;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #ffffff; 
+    width: 550px; 
+
+    display: flex;          /* Используйте flex для расположения дочерних элементов */
+    flex-direction: column; /* Дочерние элементы располагаются вертикально (в столбик) */
+    align-items: center;
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+    margin-left: 20px;
+}
+
+.header-post-list{
+    font-size: 22px;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+
+
+
+}
+
+.custom-hr{
+    width: 100px;         /* Ширина линии */
+    height: 2px;         /* Высота линии */
+    background-color: #000000; /* Цвет линии */
+    border: none;       /* Удаление рамки, если она есть */
+    margin: 20px 0;     /* Отступы сверху и снизу */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.card-img-blog-list{
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+
+}
+ 
+  
+  
+.card-blog{
+    display: flex;          /* Используйте flex для расположения дочерних элементов */
+    flex-direction: column; /* Дочерние элементы располагаются вертикально (в столбик) */
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    text-decoration: none;
+    color: black;
+
+    margin-bottom: 30px;
+}
+
+
+.img-blog-active{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.header-blog-active{
+    font-size: 32px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.img-user-blog-active{
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.meta-data-blog-active{
+    display: flex;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.img-date-blog-active{
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.user-blog-active{
+    display: flex;
+    margin-right: 20px;
+    color: #53138c;
+    font-weight: 800;
+}
+
+.date-blog-active{
+    display: flex;
+    color: #53138c;
+}
+
+.text-blog-active{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    text-indent: 2em;
+}
+
+
 
 
 
