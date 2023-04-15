@@ -23,26 +23,51 @@
 
     <div class="text-blog-active">
         {{ html_content | safe }}
+
+        <div class="end-line">_ _ _</div>
     </div>
 
     <div class="block-comment">
 
         <div class="add-comment">
-            <h2>Добавить комментарий</h2>
-            <form method="POST" action="{% url 'add_comment' post.id %}">
+            {% if user.is_authenticated %}
+            <div class="header-comment">Ваш комментарий</div>
+            <form class="comment-form" method="POST" action="{% url 'add_comment' post.id %}">
                 {% csrf_token %}
                 {{ comment_form.as_p }}
-                <button type="submit">Отправить</button>
+                <button class="ok-comment-btn" type="submit">ОТПРАВИТЬ</button>
             </form>
+            {% else %}
+            <div class="login-comment">
+                <a class="login-for-comment" href="{% url 'login' %}">Войдите,</a> чтобы оставить комментарий.
+            </div>
+            
+            {% endif %}
         </div>
+        
+        {% for comment in comments.reverse %}
 
-        <h2>Комментарии</h2>
-        {% for comment in comments %}
             <div class="comment">
+
+                <div class="meta-data-comment">
+                    <img class="img-user-comment" src="{% static 'media/user_comment.png' %}" alt="1">
+                    <div class="user-date-comment">
+                        <div class="comment-date">{{ comment.pub_date }}</div> 
+                        <div class="comment-author">{{ comment.author }}</div>
+                    </div>
+                </div>
+
+                <div class="comment-text">{{ comment.text }}</div>
+
+            </div>
+
+            <!-- <div class="comment">
                 <div class="comment-author">{{ comment.author }}</div>
                 <div class="comment-date">{{ comment.pub_date }}</div>
                 <div class="comment-text">{{ comment.text }}</div>
-            </div>
+            </div> -->
+
+
         {% empty %}
             <div class="no-comments">Пока нет комментариев.</div>
         {% endfor %}
