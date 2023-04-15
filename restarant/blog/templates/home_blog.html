@@ -26,14 +26,10 @@
                     <hr class="custom-hr">
                 </div>
 
-                <!-- <a href="@" class="card-blog">
-                    <img class="card-img-blog-list" src="{% static 'media/blog/macaroni_cheese.jpg' %}" alt="1">
-                    <div class="card-header-blog-list">NEW DISH: Macaroni and Cheese</div>
-                </a> -->
 
 
                 {% for post in posts %}
-                    <a href="{% url 'post_detail' post.id %}" class="card-blog">
+                    <a href="{% url 'detail_post' post.id %}" class="card-blog">
                         <img class="card-img-blog-list" src="{% static post.path_to_img %}" alt="1">
                         <div class="card-header-blog-list">{{post.category}}:{{ post.title }}</div>
                     </a>

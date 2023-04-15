@@ -22,9 +22,30 @@
     </div>
 
     <div class="text-blog-active">
-
         {{ html_content | safe }}
+    </div>
 
+    <div class="block-comment">
+
+        <div class="add-comment">
+            <h2>Добавить комментарий</h2>
+            <form method="POST" action="{% url 'add_comment' post.id %}">
+                {% csrf_token %}
+                {{ comment_form.as_p }}
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+
+        <h2>Комментарии</h2>
+        {% for comment in comments %}
+            <div class="comment">
+                <div class="comment-author">{{ comment.author }}</div>
+                <div class="comment-date">{{ comment.pub_date }}</div>
+                <div class="comment-text">{{ comment.text }}</div>
+            </div>
+        {% empty %}
+            <div class="no-comments">Пока нет комментариев.</div>
+        {% endfor %}
     </div>
 
 {% endblock %}

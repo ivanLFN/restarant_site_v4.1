@@ -18,12 +18,10 @@ class Post(models.Model):
     def __str__(self):
         return self.title
     
-
-# class Comment(models.Model):
-#     post = models.ForeignKey(Post, on_delete=models.CASCADE)
-#     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-#     content = models.TextField()
-#     pub_date = models.DateTimeField(auto_now_add=True)
-
-#     def __str__(self):
-#         return self.content
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comment_post')
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    pub_date = models.DateTimeField(auto_now_add=True)
+    text = models.TextField()
+    status = models.BooleanField(default=True)
+    
