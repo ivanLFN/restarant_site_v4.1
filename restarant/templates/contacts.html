@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+    <div class="contacts">
+
+        <div class="contacts-items">
+
+            <div class="block-left-contacts">
+                <div class="phone-number-contacts">
+                    <img class="img-cont" src="{% static 'media/contacts/phone.png' %}" width="50" height="50" alt="1">
+                    <div class="text-cont">+999-888-76-54</div>
+                </div>
+        
+                <div class="email-contacts">
+                    <img class="img-cont" src="{% static 'media/contacts/email.png' %}" width="50" height="50" alt="1">
+                    <div class="text-cont">LureMeFishbar@gmail.com</div>
+                </div>
+            </div>
+                
+
+            <div class="block-right-contacts">
+                <div class="address-contacts">
+                    <img class="img-cont" src="{% static 'media/contacts/information.png' %}" width="50" height="50" alt="1">
+                    <div class="text-cont">Малая Бронная ул., 19, <br>Москва, Россия, 123104</div>
+                </div>
+        
+                <div class="time-of-work-contacts">
+                    <img class="img-cont" src="{% static 'media/contacts/time_of_work.png' %}" width="50" height="50" alt="1">
+                    <div class="text-cont">
+                        <div class="time-of-work-cont">Вс-Чт: 12:00 - 00:00</div>
+                        <div class="time-of-work-cont">Пт-Сб: 12:00 - 06:00</div>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+
+        <div class="map-contacts">
+            <img class="img-map" src="{% static 'media/contacts/map-contacts.png' %}" alt="1">
+        </div>
+
+        
+        
+
+    </div>
+    
+{% endblock %}

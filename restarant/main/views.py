@@ -28,3 +28,8 @@ def about(request):
             'text_card': {}
             }
     return render(request, 'about.html', data)
+
+
+def contacts(request):
+    title = 'Contacts. RestarantAPP'
+    return render(request, 'contacts.html', {'title': title})
