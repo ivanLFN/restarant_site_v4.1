@@ -12,4 +12,6 @@ urlpatterns = [
 
     path('blog/', include('blog.urls')),
 
+    path('reservation/', include('reservation.urls')),
+
 ]
