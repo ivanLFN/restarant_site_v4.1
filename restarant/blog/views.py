@@ -4,7 +4,6 @@ from blog.models import Post
 import markdown
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from .models import Comment
 
 def blog_home(request):
     posts = Post.objects.all()
