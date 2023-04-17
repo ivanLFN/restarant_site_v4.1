@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    
+    <div class="seccess-page-reservation">
+        <div class="block-success">
+            <div class="text-seccess">ЗАРЕЗЕРВИРОВАННО УСПЕШНО</div>
+            <img class="img-seccess-reservation" src="{% static 'media/success-reserv.png' %}" alt="1">   
+        </div>
+        
+
+    </div>
+    
+{% endblock %}

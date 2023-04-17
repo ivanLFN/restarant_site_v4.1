@@ -17,3 +17,7 @@ def reserv(request):
 
     return render(request, 'reservation.html', {'form': form})
 
+
+def reserv_success(request):
+    return render(request, 'success.html', {})
+
