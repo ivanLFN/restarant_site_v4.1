@@ -87,6 +87,8 @@ body {
     font-weight: 700;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: background-color 0.3s linear;
+
+    border-radius: 10px;
 }
 
 .button:hover {
@@ -161,6 +163,8 @@ body {
     font-weight: 600;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: background-color 0.3s linear;
+
+    border-radius: 10px;
 }
 
 .header-button:hover {
@@ -205,6 +209,9 @@ body {
     background-color: #ffffff;
     z-index: 1;
     margin-top: -80px;
+
+    border-radius: 15px;
+    border: 2px solid #53138c;
     
 }
 
@@ -357,6 +364,7 @@ body {
 
 .text-header{
     padding-top: 20px;
+
     width: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
@@ -442,6 +450,7 @@ card-menu,
 
     margin-top: 30px;
     margin-bottom: 50px
+
     
 }
   
@@ -667,6 +676,9 @@ card-menu,
     background-color: #ffffff;
     width: 100%;
     padding: 20px 20px;
+
+    border-radius: 15px;
+    border: 2px solid #53138c;
 }
 
 .posts-list{
@@ -684,6 +696,9 @@ card-menu,
     padding-right: 30px;
 
     margin-left: 20px;
+
+    border-radius: 15px;
+    border: 2px solid #53138c;
 }
 
 .header-post-list{
@@ -961,6 +976,7 @@ card-menu,
     border: 4px solid #53138c;
     width: 60%;
     height: auto;
+    border-radius: 15px;
 }
 
 .map-contacts{
@@ -1002,3 +1018,82 @@ card-menu,
     align-items: center;
     display: flex;
 }
+
+.reserv-part{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+
+    padding-top: 13%;
+}
+
+
+.reserv-inputs-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 40px;
+}
+
+.reserv-block{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.reservation-content{
+    background-image: url("../media/bg_menu.jpg");
+    background-size: cover;
+    height: 88vh;
+}
+
+.label_tag{
+    color: #d9d9d9;
+    margin-bottom: 8px;
+}
+
+.reserv-obj{
+    width: 350px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+
+
+    border: 2px solid #53138c;
+
+    border-radius: 10px;
+
+}
+
+
+.reserv-up{
+    margin-bottom: 30px;
+}
+
+.btn-reservation{
+    background-color: #53138c;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 14px 30px;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: background-color 0.3s linear;
+    border-radius: 15px;
+}
+
+.btn-reservation:hover{
+    background-color: #350c5a;
+}
+
+.btn-reserv{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+

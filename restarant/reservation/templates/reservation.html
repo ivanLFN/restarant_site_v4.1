@@ -3,9 +3,60 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Отправить</button>
-    </form>
+    
+
+    <div class="reservation-content">
+
+        <form class="reserv-block" method="post">
+            {% csrf_token %}
+
+            <div class="reserv-inputs-block">
+
+                <div class="reserv-part">
+                    <div class="reserv-up">
+                        <div class="label_tag">{{ form.name.label_tag }}</div>
+                        <div class="reserv-obj">{{ form.name }}</div>
+                        
+                    </div>
+                    <div class="reserv-down">
+                        <div class="label_tag">{{ form.phone.label_tag }}</div>
+                        <div class="reserv-obj">{{ form.phone }}</div> 
+                        
+                    </div>
+                </div>
+
+                <div class="reserv-part">
+                    <div class="reserv-up">
+                        <div class="label_tag">{{ form.email.label_tag }}</div>
+                        <div class="reserv-obj">{{ form.email }}</div> 
+                    </div>
+                    <div class="reserv-down">
+                        <div class="label_tag">{{ form.date_time.label_tag }}</div>
+                        <div class="reserv-obj">{{ form.date_time }}</div> 
+                    </div>
+                </div>
+
+                <div class="reserv-part">
+                    <div class="reserv-up">
+                        <div class="label_tag">{{ form.count_person.label_tag }}</div>
+                        <div class="reserv-obj">{{ form.count_person }}</div> 
+                    </div>
+                    <div class="reserv-down">
+                        <div class="label_tag">{{ form.table.label_tag }}</div>
+                        <div class="reserv-obj">{{ form.table }}</div> 
+                    </div>
+                </div>
+
+            </div>
+            
+    
+            <!-- {{ form.as_p }} -->
+            <div class="btn-reserv">
+                <button type="submit" class="btn-reservation">ЗАРЕЗЕРВИРОВАТЬ</button>
+            </div>
+            
+        </form>
+
+        
+    </div>
 {% endblock %}
